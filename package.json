@@ -1,0 +1,17 @@
+{
+  "name": "football-info",
+  "version": "1.0.0",
+  "description": "Find out which football teams are leading the pack or are at risk of relegation in all the major football leagues",
+  "author": "Alex Efremov <alex.efremov.dev@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.15.3",
+    "nuxt": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  }
+}
