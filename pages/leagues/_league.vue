@@ -31,6 +31,9 @@ import axios from 'axios'
 const leagueIndexes = ['']
 export default {
   name: 'league',
+  validate({ params }) {
+    return leagueIds[params.league];
+  },
   async data (context) {
     const id = leagueIds[context.params.league];
     const { data } = await axios.get(`http://api.football-data.org/v1/competitions/${id}/leagueTable`)
