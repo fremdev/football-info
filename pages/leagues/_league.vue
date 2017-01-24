@@ -14,20 +14,8 @@
 </template>
 
 <script>
-const leagueIds = {
-  'premier': 426,
-  'championship': 427,
-  'bundesliga': 430,
-  'bundesliga-2': 431,
-  'eredivisie': 433,
-  'league-1': 434,
-  'league-2': 435,
-  'primera': 436,
-  'segunda': 437,
-  'serie-a': 438,
-  'primeira': 439,
-};
 import axios from 'axios'
+import config, { leagueIds } from '~/config/'
 const leagueIndexes = ['']
 export default {
   name: 'league',
@@ -36,7 +24,8 @@ export default {
   },
   async data (context) {
     const id = leagueIds[context.params.league];
-    const { data } = await axios.get(`http://api.football-data.org/v1/competitions/${id}/leagueTable`)
+    const reqConfig = { headers: {"X-Auth-Token": config.apiKey} };
+    const { data } = await axios.get(`http://api.football-data.org/v1/competitions/${id}/leagueTable`, reqConfig)
     return { leagueTable: data }
   }
 }
