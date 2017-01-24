@@ -5,37 +5,52 @@
     </h1>
     <div class="leagues">
       <div class="league">
-        <nuxt-link to="/leagues/premier/">Premier League 2016/17</nuxt-link>
+        <nuxt-link to="/leagues/premier/">Premier League</nuxt-link>
       </div>
-
-
-Championship 2016/17
-League One 2016/17
-1. Bundesliga 2016/17
-2. Bundesliga 2016/17
-DFB-Pokal 2016/17
-Eredivisie 2016/17
-Ligue 1 2016/17
-Ligue 2 2016/17
-Primera Division 2016/17
-Liga Adelante 2016/17
-Serie A 2016/17
-Primeira Liga 2016/17
-Champions League 2016/17
+      <div class="league">
+        <nuxt-link to="/leagues/championship/">Championship</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/bundesliga/">1. Bundesliga</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/bundesliga-2/">2. Bundesliga</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/eredivisie/">Eredivisie</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/league-1/">Ligue 1</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/league-2/">Ligue 2</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/primera/">Primera Division</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/segunda/">Liga Adelante</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/serie-a/">Serie A</nuxt-link>
+      </div>
+      <div class="league">
+        <nuxt-link to="/leagues/primeira/">Primeira Liga</nuxt-link>
+      </div>
     </div>
   </section>
 </template>
 
-<script>
-// import axios from 'axios'
-//
-// export default {
-//   async data (context) {
-//     const { data } = await axios.get('http://api.football-data.org/v1/competitions')
-//     return { leagues: data }
-//   }
-// }
-</script>
-
 <style scoped>
+.league {
+  padding-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  padding: 3px;
+}
+a:hover {
+  background-color: #5fa292;
+  color: #fff;
+}
 </style>
