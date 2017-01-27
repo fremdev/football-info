@@ -3,6 +3,20 @@
     <h3>{{ leagueTable.leagueCaption }}</h3>
     <h5>Current positions before matchday {{ leagueTable.matchday }}</h5>
     <table class="league">
+      <thead>
+        <tr class="league__header">
+          <th>Pos</th>
+          <th>Team</th>
+          <th>Pl</th>
+          <th>W</th>
+          <th>D</th>
+          <th>L</th>
+          <th>F</th>
+          <th>A</th>
+          <th>GD</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
       <tbody>
         <tr v-for="team in leagueTable.standing">
           <td class="team__position">{{ team.position }}</td>
@@ -46,6 +60,10 @@ export default {
   vertical-align: middle;
   line-height: 1.5;
   background: #f6f6f6;
+}
+.league__header th {
+  text-align: center;
+  padding: 8px;
 }
 .team__position {
   padding-right: 5px;
