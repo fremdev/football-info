@@ -5,8 +5,16 @@
     <table class="league">
       <tbody>
         <tr v-for="team in leagueTable.standing">
-          <td class="league__position">{{ team.position }}</td>
-          <td><span class="team"><span class="team__logo" :style="{backgroundImage: `url(${team.crestURI})`}"></span><span class="team__name">{{ team.teamName }}</span></span></td>
+          <td class="team__position">{{ team.position }}</td>
+          <td class="team"><span class="team__wrapper"><span class="team__logo" :style="{backgroundImage: `url(${team.crestURI})`}"></span><span class="team__name">{{ team.teamName }}</span></span></td>
+          <td>{{ team.playedGames }}</td>
+          <td>{{ team.wins }}</td>
+          <td>{{ team.draws }}</td>
+          <td>{{ team.losses}}</td>
+          <td>{{ team.goals}}</td>
+          <td>{{ team.goalsAgainst}}</td>
+          <td>{{ team.goalDifference }}</td>
+          <td class="team__points">{{ team.points }}</td>
         </tr>
       </tbody>
     </table>
@@ -34,11 +42,12 @@ export default {
 <style scoped>
 .league {
   margin: 0 auto;
-  text-align: left;
-  vertical-align: middle;
-}
-.league__position {
   text-align: right;
+  vertical-align: middle;
+  line-height: 1.5;
+  background: #f6f6f6;
+}
+.team__position {
   padding-right: 5px;
 }
 .team__logo {
@@ -48,13 +57,25 @@ export default {
   height: 30px;
   background-repeat: no-repeat;
   background-position: center top;
-  vertical-align: top;
+  vertical-align: middle;
   margin-right: 7px;
 }
 .team {
+  text-align: left;
+}
+.team__wrapper {
   vertical-align: middle;
 }
 .team__name {
   line-height: 30px;
+}
+.league td {
+  padding: 7px 10px;
+}
+.league tr:nth-child(odd)>td {
+    background-color: #ececec;
+}
+.team__points {
+  font-weight: bold;
 }
 </style>
